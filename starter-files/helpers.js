@@ -1,3 +1,5 @@
+
+// any data that I need in every single template goes here for ease of access
 /*
   This is a file of data and helper functions that we can expose and use in our templating function
 */
