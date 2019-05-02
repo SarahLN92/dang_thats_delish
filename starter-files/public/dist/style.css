@@ -755,7 +755,7 @@ label {
 
 .store__action {
   font-size: 10px; }
-  .store__action svg {
+  .store__action a svg {
     width: 25px;
     fill: white; }
   .store__action--edit a {
