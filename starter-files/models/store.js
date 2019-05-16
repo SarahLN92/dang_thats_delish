@@ -5,7 +5,7 @@ const slug = require('slugs');
 const storeSchema = new mongoose.Schema({
     name: {
         type: String,
-        trim: true, 
+        trim: true,
         required: 'Please enter a store name!'
     },
     slug: String,
@@ -29,7 +29,7 @@ const storeSchema = new mongoose.Schema({
             }],
             address: {
                 type: String,
-                required: 'You must supply an addres'
+                required: 'You must supply an address'
             }
     }
 });
@@ -37,11 +37,11 @@ const storeSchema = new mongoose.Schema({
 storeSchema.pre('save', function(next) {
     if (!this.isModified('name')){
         next(); //skip it
-        return; //stop this function from running 
+        return; //stop this function from running
     }
     this.slug = slug(this.name);
     next();
-    //TODO make more resilient slugs 
+    //TODO make more resilient slugs
 });
 
 module.exports = mongoose.model('Store', storeSchema);
